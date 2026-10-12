@@ -1,0 +1,22 @@
+export type Entry = { id:string; name:string; subtitle:string; rarity:string; category:string; color:string; description:string; stats?:string; tags:string[] };
+export const characters: Entry[] = [
+{id:"special-week",name:"Special Week",subtitle:"The bright country girl",rarity:"3★",category:"Character",color:"#e9b7a7",description:"A cheerful Uma Musume who dreams of becoming Japan's best horse girl.",stats:"Turf A · Medium A · Pace A",tags:["Turf","Medium","Pace Chaser"]},
+{id:"silence-suzuka",name:"Silence Suzuka",subtitle:"The sound of silence",rarity:"3★",category:"Character",color:"#b7d5c3",description:"A front-runner who wants to see the scenery no one has ever seen before.",stats:"Turf A · Medium A · Front Runner",tags:["Turf","Medium","Front Runner"]},
+{id:"tokai-teio",name:"Tokai Teio",subtitle:"The invincible dream",rarity:"3★",category:"Character",color:"#b7c8e6",description:"A lively and confident runner determined to follow in her idol's footsteps.",stats:"Turf A · Medium A · Leader",tags:["Turf","Medium","Leader"]},
+{id:"mejiro-mcqueen",name:"Mejiro McQueen",subtitle:"The noble contender",rarity:"3★",category:"Character",color:"#c9b9df",description:"A refined long-distance specialist from the distinguished Mejiro family.",stats:"Turf A · Long A · Pace Chaser",tags:["Turf","Long","Pace Chaser"]},
+{id:"rice-shower",name:"Rice Shower",subtitle:"A little blue rose",rarity:"3★",category:"Character",color:"#b9c8e8",description:"A shy runner who hopes to bring happiness to those around her.",stats:"Turf A · Long A · Pace Chaser",tags:["Turf","Long","Pace Chaser"]},
+{id:"oguri-cap",name:"Oguri Cap",subtitle:"The grey-haired monster",rarity:"3★",category:"Character",color:"#d6d6d0",description:"A legendary racer known for her appetite and unstoppable determination.",stats:"Turf A · Mile A · Medium A",tags:["Turf","Mile","Late Surger"]}
+];
+export const supports: Entry[] = [
+{id:"fine-motion",name:"Fine Motion",subtitle:"Wave of Gratitude",rarity:"SSR",category:"Speed",color:"#b7d5c3",description:"Illustrative support card entry. Verify effects and values against current game data.",stats:"Speed · Friendship bonus",tags:["Speed","SSR","Training"]},
+{id:"kitasan-black",name:"Kitasan Black",subtitle:"Fire at My Heels",rarity:"SSR",category:"Speed",color:"#d8b4a8",description:"Illustrative support card entry; effect numbers are not represented as verified data.",stats:"Speed · Training support",tags:["Speed","SSR","Training"]},
+{id:"super-creek",name:"Super Creek",subtitle:"Piece of Mind",rarity:"SSR",category:"Stamina",color:"#b8c6e5",description:"Illustrative support card entry for layout demonstration.",stats:"Stamina · Recovery skills",tags:["Stamina","SSR","Recovery"]},
+{id:"tazuna",name:"Tazuna Hayakawa",subtitle:"Tracen's Guide",rarity:"SSR",category:"Friend",color:"#c9b9df",description:"Illustrative support card entry for layout demonstration.",stats:"Friend · Energy management",tags:["Friend","SSR","Utility"]}
+];
+export const skills: Entry[] = [
+{id:"corner-recovery",name:"Corner Recovery ○",subtitle:"Recovery · Common",rarity:"Common",category:"Recovery",color:"#b7d5c3",description:"Recovery skill example. Exact activation conditions and effects should be verified.",stats:"Condition: corner",tags:["Recovery","Corner","Common"]},
+{id:"straightaway-spurt",name:"Straightaway Spurt",subtitle:"Acceleration · Common",rarity:"Common",category:"Acceleration",color:"#e9b7a7",description:"A sample acceleration skill record for demonstrating skill browsing.",stats:"Condition: straightaway",tags:["Acceleration","Straightaway","Common"]},
+{id:"swinging-maestro",name:"Swinging Maestro",subtitle:"Recovery · Gold",rarity:"Gold",category:"Recovery",color:"#d7c28b",description:"Gold skill sample. Verify current translation, condition, and effect before use.",stats:"Condition: corner",tags:["Recovery","Corner","Gold"]},
+{id:"concentration",name:"Concentration",subtitle:"Start · Gold",rarity:"Gold",category:"Start",color:"#b8c6e5",description:"Gold skill sample for the database interface. Details are illustrative.",stats:"Condition: start",tags:["Start","Gold","Utility"]},
+{id:"homestretch-haste",name:"Homestretch Haste",subtitle:"Speed · Common",rarity:"Common",category:"Speed",color:"#c9b9df",description:"Example skill entry. Use verified game sources for exact effects.",stats:"Condition: final stretch",tags:["Speed","Final stretch","Common"]}
+];
