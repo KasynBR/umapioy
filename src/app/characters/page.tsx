@@ -1,0 +1,1 @@
+import { Catalog } from "@/components/catalog"; import { characters } from "@/data/database"; export default function CharactersPage(){return <Catalog items={characters} title="Meet the runners." eyebrow="THE ROSTER / 01" description="Discover the Uma Musume behind every great race, from running styles to signature stories."/>}
