@@ -1,5 +1,65 @@
 import Link from "next/link";
 import { ArrowDownRight, ArrowRight, BookOpen, BarChart3, Compass, Search, Sparkles } from "lucide-react";
-import { characters,supports,skills } from "@/data/database";
-const sections=[{n:"01",title:"Characters",text:"Find aptitudes, running styles, and character profiles.",href:"/characters",count:characters.length,icon:Compass},{n:"02",title:"Support cards",text:"Browse training partners and compare card categories.",href:"/supports",count:supports.length,icon:ChartNoAxesCombined},{n:"03",title:"Skills",text:"Explore skill types, activation contexts, and effects.",href:"/skills",count:skills.length,icon:BookOpen}];
-export default function Home(){return <main><section className="hero"><div className="hero-copy"><div className="status-line"><span className="status-dot"/> COMMUNITY DATABASE <span className="status-divider">/</span> GLOBAL EDITION</div><h1>Every runner.<br/>Every <em>possibility.</em></h1><p className="hero-text">Your companion to the world of Umamusume. Explore characters, support cards, and skills in one carefully organized place.</p><div className="hero-actions"><Link className="button-primary" href="/characters"><Search size={17}/> Explore database <ArrowRight size={16}/></Link><a className="button-quiet" href="#collections">Discover collections <ArrowDownRight size={16}/></a></div><div className="hero-meta"><div><strong>03</strong><span>Collections</span></div><div><strong>{(characters.length+supports.length+skills.length).toString().padStart(2,"0")}</strong><span>Demo entries</span></div><div><strong>∞</strong><span>Race day dreams</span></div></div></div><div className="hero-art"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="hero-sun"/><div className="hero-star star-a">✳</div><div className="hero-star star-b">✦</div><div className="hero-number">01 <span>/ 03</span></div><div className="hero-poster"><span className="poster-top">THE RUNNER'S ARCHIVE</span><div className="poster-shape"><div className="poster-ring"/><div className="poster-disc">UMA<br/>MUSUME</div></div><span className="poster-caption">BUILT FOR THE<br/><b>FINISH LINE.</b></span><span className="poster-bottom">VOL. 001 — ATLAS</span></div><div className="floating-note"><Sparkles size={16}/><span>Find your<br/><b>next favorite.</b></span></div></div></section><section className="ticker"><span>TRAIN · RACE · DREAM</span><span>✳</span><span>YOUR NEXT STORY STARTS HERE</span><span>✳</span><span>TRAIN · RACE · DREAM</span></section><section id="collections" className="collections"><div className="section-top"><div><p className="eyebrow">YOUR STARTING LINE</p><h2>Explore the archive<span className="coral-dot">.</span></h2></div><p>A growing index for trainers who love the details as much as the finish line.</p></div><div className="collection-grid">{sections.map(s=><Link className="collection-card" href={s.href} key={s.href}><div className="collection-top"><span className="collection-icon"><s.icon size={21}/></span><span className="collection-number">{s.n}</span></div><div className="collection-bottom"><div><h3>{s.title}</h3><p>{s.text}</p></div><div className="collection-link"><span>{String(s.count).padStart(2,"0")} entries</span><ArrowRight size={18}/></div></div></Link>)}</div></section><section className="about-strip"><div className="about-symbol">A.</div><div><p className="eyebrow">A NOTE FROM THE STABLE</p><h2>Made for curious trainers.</h2><p>Atlas is an unofficial fan-made interface concept. Sample entries demonstrate the experience; verify game mechanics against current community databases.</p></div><Link href="/skills" className="text-link">Browse skills <ArrowRight size={16}/></Link></section></main>}
+import { characters, supports, skills } from "@/data/database";
+
+const sections = [
+  { n: "01", title: "Characters", text: "Find aptitudes, running styles, and character profiles.", href: "/characters", count: characters.length, icon: Compass },
+  { n: "02", title: "Support cards", text: "Browse training partners and compare card categories.", href: "/supports", count: supports.length, icon: BarChart3 },
+  { n: "03", title: "Skills", text: "Explore skill types, activation contexts, and effects.", href: "/skills", count: skills.length, icon: BookOpen },
+];
+
+export default function Home() {
+  return (
+    <main>
+      <section className="hero">
+        <div className="hero-copy">
+          <div className="status-line"><span className="status-dot" /> COMMUNITY DATABASE <span className="status-divider">/</span> GLOBAL EDITION</div>
+          <h1>Every runner.<br />Every <em>possibility.</em></h1>
+          <p className="hero-text">Your companion to the world of Umamusume. Explore characters, support cards, and skills in one carefully organized place.</p>
+          <div className="hero-actions">
+            <Link className="button-primary" href="/characters"><Search size={17} /> Explore database <ArrowRight size={16} /></Link>
+            <a className="button-quiet" href="#collections">Discover collections <ArrowDownRight size={16} /></a>
+          </div>
+          <div className="hero-meta">
+            <div><strong>03</strong><span>Collections</span></div>
+            <div><strong>{(characters.length + supports.length + skills.length).toString().padStart(2, "0")}</strong><span>Demo entries</span></div>
+            <div><strong>∞</strong><span>Race day dreams</span></div>
+          </div>
+        </div>
+        <div className="hero-art" aria-label="Abstract Uma Musume Atlas poster artwork">
+          <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="hero-sun" />
+          <div className="hero-star star-a">✳</div><div className="hero-star star-b">✦</div>
+          <div className="hero-number">01 <span>/ 03</span></div>
+          <div className="hero-poster">
+            <span className="poster-top">THE RUNNER&apos;S ARCHIVE</span>
+            <div className="poster-shape"><div className="poster-ring" /><div className="poster-disc">UMA<br />MUSUME</div></div>
+            <span className="poster-caption">BUILT FOR THE<br /><b>FINISH LINE.</b></span>
+            <span className="poster-bottom">VOL. 001 — ATLAS</span>
+          </div>
+          <div className="floating-note"><Sparkles size={16} /><span>Find your<br /><b>next favorite.</b></span></div>
+        </div>
+      </section>
+      <section className="ticker"><span>TRAIN · RACE · DREAM</span><span>✳</span><span>YOUR NEXT STORY STARTS HERE</span><span>✳</span><span>TRAIN · RACE · DREAM</span></section>
+      <section id="collections" className="collections">
+        <div className="section-top">
+          <div><p className="eyebrow">YOUR STARTING LINE</p><h2>Explore the archive<span className="coral-dot">.</span></h2></div>
+          <p>A growing index for trainers who love the details as much as the finish line.</p>
+        </div>
+        <div className="collection-grid">
+          {sections.map((section) => {
+            const Icon = section.icon;
+            return <Link className="collection-card" href={section.href} key={section.href}>
+              <div className="collection-top"><span className="collection-icon"><Icon size={21} /></span><span className="collection-number">{section.n}</span></div>
+              <div className="collection-bottom"><div><h3>{section.title}</h3><p>{section.text}</p></div><div className="collection-link"><span>{String(section.count).padStart(2, "0")} entries</span><ArrowRight size={18} /></div></div>
+            </Link>;
+          })}
+        </div>
+      </section>
+      <section className="about-strip">
+        <div className="about-symbol">A.</div>
+        <div><p className="eyebrow">A NOTE FROM THE STABLE</p><h2>Made for curious trainers.</h2><p>Atlas is an unofficial fan-made interface concept. Sample entries demonstrate the experience; verify game mechanics against current community databases.</p></div>
+        <Link href="/skills" className="text-link">Browse skills <ArrowRight size={16} /></Link>
+      </section>
+    </main>
+  );
+}
