@@ -1,0 +1,1 @@
+import { Catalog } from "@/components/catalog"; import { supports } from "@/data/database"; export default function SupportsPage(){return <Catalog items={supports} title="Build your deck." eyebrow="THE LIBRARY / 02" description="Explore support card archetypes and training roles. Use verified in-game data when planning builds."/>
