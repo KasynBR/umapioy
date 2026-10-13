@@ -1,6 +1,5 @@
 # Umamusume Atlas — The Tachyon Project
-
-An English-first community reference for Umamusume: Pretty Derby, built with Next.js App Router and TypeScript for the Tachyon Project / agnesbot.xyz.
+English-first community reference for Umamusume: Pretty Derby, built with Next.js App Router and TypeScript for Tachyon Project / agnesbot.xyz.
 
 ## Run locally
 ```bash
@@ -10,20 +9,16 @@ npm run typecheck
 npm run build
 ```
 
-## Current experience
-- **Live roster** at `/roster`: retrieves character records from the public umapyoi.net API, with loading, error, and fallback states.
-- **Characters, support cards, and skills**: searchable prototype catalogs. Entries in these legacy catalogs are explicitly illustrative until replaced with sourced records.
-- **Race lab** at `/races`: a track reference and race-planning worksheet with shareable URL state.
-- **Sources & data policy** at `/sources`: dataset provenance, regional-version caveats, and attribution.
-- Responsive editorial interface with quick navigation and clear source status.
+## Experience
+- `/roster`: live character records from the public umapyoi.net API, with loading, error and fallback states.
+- `/characters`, `/supports`, `/skills`: searchable legacy demo catalogs; entries are illustrative until sourced and verified.
+- `/races`: track reference and race-planning worksheet with shareable URL state.
+- `/sources`: provenance, attribution, regional version notes and methodology.
 
 ## Data provenance
-The live roster uses the public API documented at https://monitoring.umapyoi.net/docs/ (API: https://monitoring.umapyoi.net/api/v1/character/list). The API author requests attribution; please credit **umapyoi.net**. Character translations are credited by that project to GameTora and Noccu's Translation Project. See `/sources` for current scope and limitations.
+The live roster uses the public API documented at https://v2.umapyoi.net/docs/ and endpoint https://umapyoi.net/api/v1/character/list. Credit **umapyoi.net**. Character translations are credited by that project to GameTora and community translation projects.
+Additional references: https://gametora.com/umamusume, https://uma.guide/, https://umamusumedb.com/, https://teiostep.net/. These are references, not integrated feeds unless explicitly stated.
 
-GameTora (https://gametora.com/umamusume), uma.guide (https://uma.guide/), UmamusumeDB (https://umamusumedb.com/), and TeioStep (https://teiostep.net/) are additional research references. They are not represented as integrated data feeds unless explicitly stated.
+Global and Japanese releases differ in schedules, availability, translated skill names, and sometimes balance/event timing. The roster is a community-maintained JP-oriented source; prototype catalogs do not claim region parity.
 
-## Region handling
-Global and Japanese releases differ in schedules, available cards/characters, translated skill names, and balance or event timing. The interface labels the live roster as a community-maintained JP-oriented source. The prototype catalogs do not claim region parity. Do not use unsourced sample effects to make competitive decisions.
-
-## License and rights
-This is an unofficial fan project and is not affiliated with or endorsed by Cygames. Game names, characters, and assets belong to their respective rights holders. Follow each source's terms and attribution requirements; avoid bulk mirroring proprietary game assets.
+Unofficial fan project; not affiliated with Cygames. Respect source terms, attribution and game asset rights.
