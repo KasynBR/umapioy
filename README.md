@@ -11,7 +11,7 @@ npm run build
 
 ## Experience
 - `/roster`: live character records from the public umapyoi.net API, with search, source IDs, raw metadata, loading and error states.
-- `/supports`: live support-card records from the umapyoi.net API, searchable with inspectable raw metadata. `/skills`: searchable live skill records from Tsuyuchan-jp/umamusume-data. `/courses`: searchable 140-course Japanese reference. `/characters` remains illustrative until sourced and verified.
+- `/supports`: live support-card records from the umapyoi.net API, searchable with inspectable raw metadata. `/skills`: searchable live skill records from Tsuyuchan-jp/umamusume-data. `/courses`: searchable 140-course Japanese reference. `/characters` redirects to the live roster; old demo detail URLs remain illustrative.
 - `/races`: race-planning worksheet with shareable URL state.
 - `/sources`: provenance, attribution, regional version notes and methodology.
 
