@@ -1,65 +1,29 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, BookOpen, BarChart3, Compass, Search, Sparkles } from "lucide-react";
+import { ArrowDownRight, ArrowRight, BookOpen, BarChart3, Compass, Search, Sparkles, Radio, Flag, Database, ExternalLink } from "lucide-react";
 import { characters, supports, skills } from "@/data/database";
-
 const sections = [
-  { n: "01", title: "Characters", text: "Find aptitudes, running styles, and character profiles.", href: "/characters", count: characters.length, icon: Compass },
-  { n: "02", title: "Support cards", text: "Browse training partners and compare card categories.", href: "/supports", count: supports.length, icon: BarChart3 },
-  { n: "03", title: "Skills", text: "Explore skill types, activation contexts, and effects.", href: "/skills", count: skills.length, icon: BookOpen },
+  { n: "01", title: "Live roster", text: "Search the community character index, with source status and original IDs.", href: "/roster", count: "LIVE", icon: Radio },
+  { n: "02", title: "Support cards", text: "Compare training partners and card categories. Sample entries are labelled.", href: "/supports", count: String(supports.length).padStart(2,"0"), icon: BarChart3 },
+  { n: "03", title: "Skills library", text: "Explore skill categories and activation context; verify mechanics before use.", href: "/skills", count: String(skills.length).padStart(2,"0"), icon: BookOpen },
+  { n: "04", title: "Race lab", text: "Build a course brief and share the exact race conditions with your team.", href: "/races", count: "TOOLS", icon: Flag },
 ];
-
 export default function Home() {
-  return (
-    <main>
-      <section className="hero">
-        <div className="hero-copy">
-          <div className="status-line"><span className="status-dot" /> COMMUNITY DATABASE <span className="status-divider">/</span> GLOBAL EDITION</div>
-          <h1>Every runner.<br />Every <em>possibility.</em></h1>
-          <p className="hero-text">Your companion to the world of Umamusume. Explore characters, support cards, and skills in one carefully organized place.</p>
-          <div className="hero-actions">
-            <Link className="button-primary" href="/characters"><Search size={17} /> Explore database <ArrowRight size={16} /></Link>
-            <a className="button-quiet" href="#collections">Discover collections <ArrowDownRight size={16} /></a>
-          </div>
-          <div className="hero-meta">
-            <div><strong>03</strong><span>Collections</span></div>
-            <div><strong>{(characters.length + supports.length + skills.length).toString().padStart(2, "0")}</strong><span>Demo entries</span></div>
-            <div><strong>∞</strong><span>Race day dreams</span></div>
-          </div>
-        </div>
-        <div className="hero-art" aria-label="Abstract Uma Musume Atlas poster artwork">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="hero-sun" />
-          <div className="hero-star star-a">✳</div><div className="hero-star star-b">✦</div>
-          <div className="hero-number">01 <span>/ 03</span></div>
-          <div className="hero-poster">
-            <span className="poster-top">THE RUNNER&apos;S ARCHIVE</span>
-            <div className="poster-shape"><div className="poster-ring" /><div className="poster-disc">UMA<br />MUSUME</div></div>
-            <span className="poster-caption">BUILT FOR THE<br /><b>FINISH LINE.</b></span>
-            <span className="poster-bottom">VOL. 001 — ATLAS</span>
-          </div>
-          <div className="floating-note"><Sparkles size={16} /><span>Find your<br /><b>next favorite.</b></span></div>
-        </div>
-      </section>
-      <section className="ticker"><span>TRAIN · RACE · DREAM</span><span>✳</span><span>YOUR NEXT STORY STARTS HERE</span><span>✳</span><span>TRAIN · RACE · DREAM</span></section>
-      <section id="collections" className="collections">
-        <div className="section-top">
-          <div><p className="eyebrow">YOUR STARTING LINE</p><h2>Explore the archive<span className="coral-dot">.</span></h2></div>
-          <p>A growing index for trainers who love the details as much as the finish line.</p>
-        </div>
-        <div className="collection-grid">
-          {sections.map((section) => {
-            const Icon = section.icon;
-            return <Link className="collection-card" href={section.href} key={section.href}>
-              <div className="collection-top"><span className="collection-icon"><Icon size={21} /></span><span className="collection-number">{section.n}</span></div>
-              <div className="collection-bottom"><div><h3>{section.title}</h3><p>{section.text}</p></div><div className="collection-link"><span>{String(section.count).padStart(2, "0")} entries</span><ArrowRight size={18} /></div></div>
-            </Link>;
-          })}
-        </div>
-      </section>
-      <section className="about-strip">
-        <div className="about-symbol">A.</div>
-        <div><p className="eyebrow">A NOTE FROM THE STABLE</p><h2>Made for curious trainers.</h2><p>Atlas is an unofficial fan-made interface concept. Sample entries demonstrate the experience; verify game mechanics against current community databases.</p></div>
-        <Link href="/skills" className="text-link">Browse skills <ArrowRight size={16} /></Link>
-      </section>
-    </main>
-  );
+ return <main>
+  <section className="hero">
+   <div className="hero-copy">
+    <div className="status-line"><span className="status-dot" /> TACHYON PROJECT <span className="status-divider">/</span> FIELD NOTES 001</div>
+    <h1>Research the race.<br/>Rewrite the <em>finish.</em></h1>
+    <p className="hero-text">A trainer's research desk for Umamusume: Pretty Derby. Track down a runner, inspect the details, and turn game knowledge into a plan worth sharing.</p>
+    <div className="hero-actions"><Link className="button-primary" href="/roster"><Search size={17}/> Open live roster <ArrowRight size={16}/></Link><Link className="button-quiet" href="/races">Enter race lab <ArrowDownRight size={16}/></Link></div>
+    <div className="hero-meta"><div><strong>JP + GL</strong><span>Version-aware roadmap</span></div><div><strong>01</strong><span>Live community feed</span></div><div><strong>∞</strong><span>Ways to race</span></div></div>
+   </div>
+   <div className="hero-art" aria-label="Abstract racing archive poster artwork"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="hero-sun"/><div className="hero-star star-a">✳</div><div className="hero-star star-b">✦</div><div className="hero-number">T-01 <span>/ ATLAS</span></div><div className="hero-poster"><span className="poster-top">THE TACHYON PROJECT</span><div className="poster-shape"><div className="poster-ring"/><div className="poster-disc">RACE<br/>DATA</div></div><span className="poster-caption">KNOW THE FIELD.<br/><b>OWN THE LINE.</b></span><span className="poster-bottom">VOL. 001 — RESEARCH LOG</span></div><div className="floating-note"><Sparkles size={16}/><span>Every detail has a<br/><b>starting point.</b></span></div></div>
+  </section>
+  <section className="ticker"><span>TRAIN · RACE · RESEARCH</span><span>✳</span><span>JP / GLOBAL · CLEARLY LABELLED</span><span>✳</span><span>TRAIN · RACE · RESEARCH</span></section>
+  <section id="collections" className="collections"><div className="section-top"><div><p className="eyebrow">YOUR STARTING LINE</p><h2>Choose your next lead<span className="coral-dot">.</span></h2></div><p>One live community index, practical tools, and transparent notes on where each fact comes from.</p></div>
+   <div className="collection-grid">{sections.map((section)=>{const Icon=section.icon;return <Link className="collection-card" href={section.href} key={section.href}><div className="collection-top"><span className="collection-icon"><Icon size={21}/></span><span className="collection-number">{section.n}</span></div><div className="collection-bottom"><div><h3>{section.title}</h3><p>{section.text}</p></div><div className="collection-link"><span>{section.count==="LIVE"?"Community API":section.count==="TOOLS"?"Open tools":section.count+" demo records"}</span><ArrowRight size={18}/></div></div></Link>;})}</div>
+  </section>
+  <section className="about-strip"><div className="about-symbol">T.</div><div><p className="eyebrow">DATA SHOULD SHOW ITS WORK</p><h2>Sources, versions, and uncertainty in the open.</h2><p>The live roster is sourced from umapyoi.net. Other catalogs remain marked as illustrative until their records are replaced with verifiable data. Global and Japanese releases are not assumed to be in sync.</p></div><Link href="/sources" className="text-link">Read methodology <ExternalLink size={16}/></Link></section>
+  <section className="source-rail"><div><p className="eyebrow">FIELD REFERENCE</p><h2>Know where the facts came from.</h2></div><Link href="/sources"><Database size={18}/> Sources & data policy <ArrowRight size={16}/></Link><Link href="https://gametora.com/umamusume" target="_blank"><Compass size={18}/> GameTora <ExternalLink size={15}/></Link><Link href="https://uma.guide/" target="_blank"><BookOpen size={18}/> uma.guide <ExternalLink size={15}/></Link></section>
+ </main>;
 }
