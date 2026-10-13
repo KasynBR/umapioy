@@ -10,8 +10,8 @@ npm run build
 ```
 
 ## Experience
-- `/roster`: live character records from the public umapyoi.net API, with loading, error and fallback states.
-- `/characters`, `/supports`, `/skills`: searchable legacy demo catalogs; entries are illustrative until sourced and verified.
+- `/roster`: live character records from the public umapyoi.net API, with search, source IDs, raw metadata, loading and error states.
+- `/supports`: live support-card records from the umapyoi.net API, searchable with inspectable raw metadata. `/characters` and `/skills` remain illustrative until sourced and verified.
 - `/races`: track reference and race-planning worksheet with shareable URL state.
 - `/sources`: provenance, attribution, regional version notes and methodology.
 
