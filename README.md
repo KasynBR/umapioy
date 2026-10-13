@@ -16,7 +16,7 @@ npm run build
 - `/sources`: provenance, attribution, regional version notes and methodology.
 
 ## Data provenance
-The live roster uses the public API documented at https://v2.umapyoi.net/docs/ and endpoint https://umapyoi.net/api/v1/character/list. Credit **umapyoi.net**. Character translations are credited by that project to GameTora and community translation projects.
+The live roster uses the public API documented at https://console.umapyoi.net/docs/index.html and endpoint https://umapyoi.net/api/v1/character/list. Credit **umapyoi.net**. The upstream project credits its English translations to its maintainer, GameTora and Hachimi; verify attribution against the current API documentation.
 Additional references: https://gametora.com/umamusume, https://uma.guide/, https://umamusumedb.com/, https://teiostep.net/. These are references, not integrated feeds unless explicitly stated.
 
 Global and Japanese releases differ in schedules, availability, translated skill names, and sometimes balance/event timing. The roster is a community-maintained JP-oriented source; prototype catalogs do not claim region parity.
