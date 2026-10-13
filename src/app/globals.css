@@ -26,3 +26,5 @@
 .race-fields label input,.race-fields label select{min-width:0;width:100%}
 .race-preview .detail-stat{line-height:1.65}
 @media(max-width:520px){.support-raw{max-width:72vw}.roster-table-wrap{margin-right:-1px}.source-credit{gap:12px}}
+
+.roster-name-cell{display:flex;align-items:center;gap:11px;min-width:210px}.roster-name-cell>img{width:42px;height:42px;object-fit:cover;border-radius:6px;background:#e7e4de;border:1px solid var(--line);flex-shrink:0}.roster-name-cell>div{min-width:0}.support-raw{max-width:420px;max-height:260px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:10px/1.6 "DM Mono",monospace;padding:12px;background:#f0eee8;border-radius:5px}
