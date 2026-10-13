@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const revalidate = 3600;
-const ENDPOINT = "https://monitoring.umapyoi.net/api/v1/character/list";
+const ENDPOINT = "https://umapyoi.net/api/v1/character/list";
 
 export async function GET() {
   try {
@@ -14,7 +14,8 @@ export async function GET() {
       return NextResponse.json({ ok: false, source: "umapyoi.net", error: "Upstream returned HTTP " + response.status }, { status: 502 });
     }
     const raw: unknown = await response.json();
-    const data = Array.isArray(raw) ? raw : raw && typeof raw === "object" && "data" in raw && Array.isArray((raw as {data:unknown}).data) ? (raw as {data:unknown[]}).data : null;
+    const envelope = raw && typeof raw === "object" ? raw as {data?:unknown;results?:{data?:unknown[]}} : null;
+    const data = Array.isArray(raw) ? raw : envelope && Array.isArray(envelope.data) ? envelope.data : envelope && envelope.results && Array.isArray(envelope.results.data) ? envelope.results.data : null;
     if (!data) {
       return NextResponse.json({ ok: false, source: "umapyoi.net", error: "The source returned an unrecognized response shape." }, { status: 502 });
     }
