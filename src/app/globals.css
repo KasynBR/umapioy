@@ -16,3 +16,13 @@
 @media(max-width:520px){.race-fields{grid-template-columns:1fr}.race-form,.race-preview{padding:17px}.region-warning{align-items:flex-start;flex-wrap:wrap}.region-warning>span{min-width:75%}.source-method{padding:19px;gap:13px}.source-method h2,.region-policy h2{font-size:20px}.source-credit>a{white-space:normal}.source-rail>a{flex:1}.roster-status{flex-direction:column}.source-row{gap:7px}.source-title h2{font-size:17px}}
 
 .brief-summary{padding:18px;background:#f0eee8;border:1px solid var(--line);border-radius:7px;margin-bottom:20px}.brief-summary h2{font:700 20px Manrope;letter-spacing:-.7px;margin:12px 0}.brief-summary dl{margin:0}.brief-summary dl>div{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-top:1px solid #ddd8ce;font-size:11px}.brief-summary dt{color:var(--muted)}.brief-summary dd{margin:0;text-align:right;font-weight:600}.catalog-demo-notice{margin-bottom:18px}
+
+/* Source record inspection */
+.support-raw{max-width:min(720px,78vw);max-height:280px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding:14px;background:#f0eee8;border:1px solid var(--line);border-radius:6px;font:11px/1.6 'DM Mono',monospace;color:#45443e}
+.roster-table details{position:relative}.roster-table details[open] .support-raw{position:relative;z-index:2}
+.roster-table td{vertical-align:top}.roster-table td strong{font-weight:600}.roster-table td .row-sub{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.source-credit{flex-wrap:wrap}.source-credit>div{flex:1;min-width:190px}.source-credit>a{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:#77766f}
+.source-credit>a svg,.table-link svg{display:inline-block;vertical-align:middle}
+.race-fields label input,.race-fields label select{min-width:0;width:100%}
+.race-preview .detail-stat{line-height:1.65}
+@media(max-width:520px){.support-raw{max-width:72vw}.roster-table-wrap{margin-right:-1px}.source-credit{gap:12px}}
